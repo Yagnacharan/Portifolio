@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 18px;
+  width: 350px;
+  color: white;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #22c55e;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.weather-box {
+  display: none;
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+#temp {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 14px;
+}
